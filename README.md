@@ -1,3 +1,3 @@
-SQL Server’da Mükerrer Kayıtları Bulma
+# SQL Server’da Mükerrer Kayıtları Listeleme
 
-Select KolonAdi, Count(KolonAdi) From TabloAdi Group By KolonAdi Having Count (KolonAdi) > 1
+`Select KOLONADI, Count(KOLONADI) From TABLOADI Group By KOLONADI Having Count (KOLONADI) > 1`
