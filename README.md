@@ -24,3 +24,11 @@
     CLOSE DONGU
     DEALLOCATE DONGU
     
+#### Döngü Yerine Kullanılabilir
+
+    DECLARE  @sql NVARCHAR(MAX) = ''
+	SELECT @sql += 'EXEC StoredProcedure ''' + CONVERT(VARCHAR(50), Id) + ''',''' 
+        + CONVERT(VARCHAR(50),MemberId) + ''';' 
+    FROM People
+	--PRINT @sql
+	EXEC sp_executesql @sql
